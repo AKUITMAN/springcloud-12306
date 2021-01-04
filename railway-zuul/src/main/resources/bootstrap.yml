@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: railway-zuul
+  cloud:
+    config:
+      discovery:
+        service-id: railway-config
+        enabled: true
+      name: aku-shop
+      profile: dev
+      label: main
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+#当使用zuul进行请求
+zuul:
+  sensitive-headers:

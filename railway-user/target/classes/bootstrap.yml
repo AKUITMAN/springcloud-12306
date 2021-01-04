@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: railway-user
+  cloud:
+    config:
+      discovery:
+        service-id: railway-config
+        enabled: true
+      name: aku-shop
+      profile: dev
+      label: main
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="railway-eureka" />
+        <module name="railway-address" />
+        <module name="railway-user" />
+        <module name="railway-zuul" />
+        <module name="railway-utils" />
+        <module name="railway-pojo" />
+        <module name="railway-config" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="railway-address" options="-parameters" />
+      <module name="railway-config" options="-parameters" />
+      <module name="railway-eureka" options="-parameters" />
+      <module name="railway-pojo" options="-parameters" />
+      <module name="railway-user" options="-parameters" />
+      <module name="railway-utils" options="-parameters" />
+      <module name="railway-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

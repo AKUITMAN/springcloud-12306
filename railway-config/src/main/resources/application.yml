@@ -1,0 +1,26 @@
+server:
+  port: 7500
+spring:
+  zipkin:
+    base-url: http://localhost:5300
+  sleuth:
+    sampler:
+      probability: 1.0
+  application:
+    name: railway-config
+  #使用本地配置得方式
+  #profiles:
+  #  active: native
+  cloud:
+    config:
+      server:
+#        native:
+#         search-locations: classpath:properties/
+        git:
+          uri: https://github.com/AKUITMAN/springcloud-config.git
+          search-paths: springcloud-config
+          default-label: main
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
